@@ -41,8 +41,14 @@ namespace Laba2
             }
             else if (F == 3)
             {
+                if (label1.Left > ClientRectangle.Width-label1.Width)
+                {
+                    label1.Left = ClientRectangle.Width-label1.Width;
+                }
+
                 label1.Top = ClientRectangle.Height-label1.Height;
                 label1.Left -= 1;
+
                 if(label1.Left == 0)
                 {
                     F = 4;
@@ -50,8 +56,14 @@ namespace Laba2
             }
             else if (F == 4)
             {
+                if (label1.Top > ClientRectangle.Height-label1.Height)
+                {
+                    label1.Top = ClientRectangle.Height-label1.Height;
+                }
+
                 label1.Left = 0;
                 label1.Top -= 1;
+
                 if (label1.Top == 0)
                 {
                     F = 1;
